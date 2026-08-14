@@ -1,6 +1,6 @@
 /* Replace these two values with your Supabase project values. */
-const SUPABASE_URL = "YOUR_SUPABASE_URL";
-const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+const SUPABASE_URL = "https://xqhlqqqdihyliqfxutxd.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable__YLfxP5KuFw_-L6X5TE-JA_6AJw-RQ7";
 const sb = (window.supabase && SUPABASE_URL.startsWith("http"))
   ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
 
