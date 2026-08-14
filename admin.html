@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin — Deepak Web Studio</title><link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+<header class="topbar"><a class="brand" href="index.html">← Deepak Web Studio</a><span class="admin-label">ADMIN PANEL</span><button id="logout" class="btn ghost hidden">Logout</button></header>
+<main class="admin-wrap">
+  <section id="loginCard" class="card auth-card">
+    <span class="eyebrow">PRIVATE AREA</span><h1>Admin login</h1>
+    <p>Use your Supabase Auth email and password.</p>
+    <form id="loginForm"><input name="email" type="email" required placeholder="Admin email"><input name="password" type="password" required placeholder="Password"><button class="btn primary">Login</button><small id="loginMsg"></small></form>
+  </section>
+
+  <section id="dashboard" class="hidden">
+    <div class="admin-tabs">
+      <button class="tab active" data-tab="websites">Websites</button>
+      <button class="tab" data-tab="feedback">Feedback</button>
+      <button class="tab" data-tab="settings">Settings</button>
+    </div>
+
+    <div id="tab-websites" class="tab-panel">
+      <div class="admin-head"><div><span class="eyebrow">CONTENT</span><h2>Website demos</h2></div><button id="newSite" class="btn primary">+ Add website</button></div>
+      <div id="siteList" class="admin-list"></div>
+      <form id="siteForm" class="card editor hidden">
+        <div class="admin-head"><h3 id="siteFormTitle">Add website</h3><button type="button" id="cancelSite" class="btn ghost">Cancel</button></div>
+        <input type="hidden" name="id">
+        <div class="form-grid"><input name="title" required placeholder="Website title"><input name="category" required placeholder="Category e.g. Salon"></div>
+        <div class="form-grid"><input name="image_url" placeholder="Thumbnail/photo URL"><input name="demo_url" required placeholder="Live demo URL"></div>
+        <textarea name="description" required placeholder="Short description"></textarea>
+        <input name="tags" placeholder="Tags separated by commas">
+        <button class="btn primary">Save website</button><small id="siteMsg"></small>
+      </form>
+    </div>
+
+    <div id="tab-feedback" class="tab-panel hidden"><div class="admin-head"><div><span class="eyebrow">MODERATION</span><h2>Feedback</h2></div></div><div id="adminFeedback" class="admin-list"></div></div>
+
+    <div id="tab-settings" class="tab-panel hidden">
+      <div class="admin-head"><div><span class="eyebrow">CONTROL CENTER</span><h2>Website settings</h2></div></div>
+      <form id="settingsForm" class="card editor">
+        <label>WhatsApp number<input name="whatsapp" placeholder="9198XXXXXXXX"></label>
+        <label>About text<textarea name="about_text"></textarea></label>
+        <label>About image URL<input name="about_image"></label>
+        <label>Theme<select name="theme"><option value="cream">Cream</option><option value="lavender">Lavender</option><option value="mint">Mint</option><option value="sky">Sky</option><option value="peach">Peach</option></select></label>
+        <button class="btn primary">Save settings</button><small id="settingsMsg"></small>
+      </form>
+      <p class="hint">Changing the theme here changes the public site while keeping the same URL.</p>
+    </div>
+  </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="app.js"></script><script src="admin.js"></script>
+</body>
+</html>

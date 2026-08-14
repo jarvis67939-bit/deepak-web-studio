@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Deepak Web Studio — Website Showcase</title>
+  <meta name="description" content="Explore website demos by Deepak Web Studio and start your own project.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top"><span class="brand-dot"></span> Deepak Web Studio</a>
+    <nav>
+      <a href="#demos">Demos</a>
+      <a href="#about">About</a>
+      <a href="#feedback">Feedback</a>
+    </nav>
+    <a class="nav-cta" id="navBuild" href="#build">Let's Build</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div>
+        <span class="eyebrow">WEB DESIGN • DEVELOPMENT • DIGITAL PRESENCE</span>
+        <h1>Find a demo.<br><span>Build your website.</span></h1>
+        <p>Explore ready-made website concepts for businesses, creators and professionals. Like one? Let's turn it into your own website.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#demos">Explore Demos</a>
+          <a class="btn ghost" href="#build">Let's Build →</a>
+        </div>
+        <div class="trust-row"><span>⚡ Responsive</span><span>🎨 Custom design</span><span>📱 Mobile friendly</span></div>
+      </div>
+      <div class="hero-card">
+        <div class="mini-window">
+          <div class="window-top"><i></i><i></i><i></i><span>live-preview</span></div>
+          <div class="preview-grid"><div></div><div></div><div></div></div>
+          <strong>Modern. Fast. Yours.</strong>
+          <small>Every demo can be customized.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="demos">
+      <div class="section-head">
+        <div><span class="eyebrow">SHOWCASE</span><h2>Website demos</h2></div>
+        <div class="search-wrap"><span>⌕</span><input id="search" placeholder="Search salon, restaurant, doctor..."></div>
+      </div>
+      <div id="categoryBar" class="chips"></div>
+      <div id="demoGrid" class="demo-grid"></div>
+      <div id="empty" class="empty hidden">No demos found. Try another search.</div>
+    </section>
+
+    <section class="split-section" id="about">
+      <div class="about-photo" id="aboutPhoto"><span>YOUR BUSINESS</span></div>
+      <div>
+        <span class="eyebrow">WHY WORK WITH ME</span>
+        <h2>Websites designed around your business.</h2>
+        <p id="aboutText">I create clean, responsive and conversion-focused websites for local businesses and personal brands.</p>
+        <div class="feature-list">
+          <div><b>01</b><span>Modern responsive design</span></div>
+          <div><b>02</b><span>Clear calls-to-action</span></div>
+          <div><b>03</b><span>Easy future updates</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feedback-section" id="feedback">
+      <div class="section-head"><div><span class="eyebrow">SOCIAL PROOF</span><h2>What people say</h2></div></div>
+      <div id="feedbackGrid" class="feedback-grid"></div>
+      <form id="feedbackForm" class="card form-card">
+        <h3>Leave feedback</h3>
+        <div class="form-grid">
+          <input name="name" required maxlength="60" placeholder="Your name">
+          <input name="rating" type="number" min="1" max="5" value="5" required placeholder="Rating 1–5">
+        </div>
+        <textarea name="message" required maxlength="500" placeholder="Tell us what you think..."></textarea>
+        <button class="btn primary" type="submit">Send feedback</button>
+        <small id="feedbackMsg"></small>
+      </form>
+    </section>
+
+    <section class="build" id="build">
+      <div>
+        <span class="eyebrow">READY?</span>
+        <h2>Let's build something that fits your business.</h2>
+        <p>Tell me what you need and I'll help you choose a suitable demo or create a custom design.</p>
+      </div>
+      <a class="btn light" id="buildWhatsApp" target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+    </section>
+  </main>
+
+  <a class="floating-wa" id="floatingWhatsApp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">◔</a>
+  <footer>© <span id="year"></span> Deepak Web Studio · <a href="admin.html">Admin</a></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
