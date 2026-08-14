@@ -52,4 +52,4 @@ document.getElementById("cancelSite")?.addEventListener("click",()=>document.get
 document.getElementById("siteForm")?.addEventListener("submit",saveSite);
 document.getElementById("settingsForm")?.addEventListener("submit",async e=>{e.preventDefault();const f=e.target,p={whatsapp:f.elements.whatsapp.value,about_text:f.elements.about_text.value,about_image:f.elements.about_image.value,theme:f.elements.theme.value};if(sb){const r=await sb.from("settings").upsert({id:1,...p});document.getElementById("settingsMsg").textContent=r.error?.message||"Settings saved."}else{localStorage.setItem("dws_settings",JSON.stringify({...defaultSettings,...p}));document.getElementById("settingsMsg").textContent="Settings saved locally."}});
 document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x===b));document.querySelectorAll(".tab-panel").forEach(x=>x.classList.add("hidden"));document.getElementById("tab-"+b.dataset.tab).classList.remove("hidden")});
-if(document.getElementById("loginCard"))requireAdmin();
+if(document.getElementById
